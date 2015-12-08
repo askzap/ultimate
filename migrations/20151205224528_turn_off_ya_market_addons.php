@@ -8,8 +8,6 @@ class TurnOffYaMarketAddons extends AbstractMigration
     {
         fn_uninstall_addon('yandex_market');
         fn_uninstall_addon('yandex_search');
-        die();
-
     }
 
     public function down()
