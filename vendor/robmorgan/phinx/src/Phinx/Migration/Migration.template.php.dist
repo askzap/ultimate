@@ -1,0 +1,18 @@
+<?php
+
+use Phinx\Migration\AbstractMigration;
+use Tygh\Registry; if (!defined('AREA')){define('AREA','A');} require_once dirname(dirname(__FILE__)).'/init.php';
+class $className extends AbstractMigration
+{
+    public function up()
+    {
+        
+
+    }
+
+    public function down()
+    {
+
+
+    }
+}
