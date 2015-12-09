@@ -6,13 +6,12 @@ class LangVarsUpdater extends AbstractMigration
     public function up()
     {
         fn_print_r('Hello world!');
-		$addons = array('ak_union_web');
+		$addons = array('ak_union_web', 'ak_partkom', 'ak_ixora', 'ak_autopiter');
         $updater = array();
 
         foreach (fn_get_translation_languages() as $lang_code => $_data) {
             foreach ($addons as $addon) {
             	$addon_scheme = @simplexml_load_file('app/addons/'.$addon.'/addon.xml', '\\Tygh\\ExSimpleXmlElement', LIBXML_NOCDATA);
-                fn_print_die($addon_scheme);
                 $current_langvars = $addon_scheme->xpath("//language_variables/item[@lang='$lang_code']");
                 foreach ($current_langvars as $key => $value) {
                     if(!empty($value) && !empty($value['id']) && !empty($value['lang'])) {
