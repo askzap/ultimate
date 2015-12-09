@@ -1,5 +1,7 @@
 
 /var/cache/*
+/images/*
+/var/database/*
 
 config.local.php
 
