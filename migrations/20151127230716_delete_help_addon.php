@@ -11,6 +11,7 @@ class DeleteHelpAddon extends AbstractMigration
         fn_uninstall_addon("customers_also_bought", false);
         fn_uninstall_addon("blog", false);
         fn_uninstall_addon("reward_points", false);
+        fn_uninstall_addon("twigmo", false);
 
         $addons = array(
             'hidpi' => 'A',
