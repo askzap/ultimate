@@ -1,0 +1,1 @@
+<td class="row-status">{$company.market_code}</td>
