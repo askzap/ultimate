@@ -8,7 +8,7 @@
     <default_language>ru</default_language>
 
     <language_variables>
-        <item id="age_gate.birthdate_page.button_text" lang="ru">send</item>
-        <item id="age_gate.birthdate_page.button_text" lang="ru">Intră</item>
+        <item id="ak_market_code" lang="ru">Код рынка</item>
+        <item id="ak_market_code" lang="en">Market Code</item>
     </language_variables>
 </addon>
