@@ -19,6 +19,7 @@
         {include file="common/check_items.tpl"}</th>
     <th width="6%"><a class="cm-ajax" href="{"`$c_url`&sort_by=id&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id="pagination_contents">{__("id")}{if $search.sort_by == "id"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
     <th width="25%"><a class="cm-ajax" href="{"`$c_url`&sort_by=company&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id="pagination_contents">{__("name")}{if $search.sort_by == "company"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
+    {hook name="companies:add_th"}{/hook}
     {if !"ULTIMATE"|fn_allowed_for}
         <th width="25%"><a class="cm-ajax" href="{"`$c_url`&sort_by=email&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id="pagination_contents">{__("email")}{if $search.sort_by == "email"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
     {/if}
@@ -38,6 +39,7 @@
         <input type="checkbox" name="company_ids[]" value="{$company.company_id}" class="cm-item" /></td>
     <td class="row-status"><a href="{"companies.update?company_id=`$company.company_id`"|fn_url}">&nbsp;<span>{$company.company_id}</span>&nbsp;</a></td>
     <td class="row-status"><a href="{"companies.update?company_id=`$company.company_id`"|fn_url}">{$company.company}</a></td>
+    {hook name="companies:add_td"}{/hook}
     {if !"ULTIMATE"|fn_allowed_for}
         <td class="row-status"><a href="mailto:{$company.email}">{$company.email}</a></td>
     {/if}

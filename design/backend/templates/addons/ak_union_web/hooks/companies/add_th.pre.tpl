@@ -1,0 +1,1 @@
+<th width="25%"><a class="cm-ajax" href="{"`$c_url`&sort_by=market_code&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id="pagination_contents">{__("ak_market_code")}{if $search.sort_by == "market_code"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
